@@ -11,7 +11,6 @@ local Title_2 = Instance.new("TextLabel")
 local Button4 = Instance.new("TextButton")
 local Button3 = Instance.new("TextButton")
 local Button2 = Instance.new("TextButton")
-local Button1 = Instance.new("TextButton")
 
 --Properties:
 
@@ -83,7 +82,7 @@ Button3.Parent = Background
 Button3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Button3.BackgroundTransparency = 0.500
 Button3.BorderSizePixel = 3
-Button3.Position = UDim2.new(0.18233113, 0, 0.56860739, 0)
+Button3.Position = UDim2.new(0.179176554, 0, 0.394152582, 0)
 Button3.Size = UDim2.new(0, 200, 0, 50)
 Button3.Text = "Auto Use"
 Button3.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -104,22 +103,9 @@ Button2.TextScaled = true
 Button2.TextSize = 14.000
 Button2.TextWrapped = true
 
-Button1.Name = "Button1"
-Button1.Parent = Background
-Button1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Button1.BackgroundTransparency = 0.500
-Button1.BorderSizePixel = 3
-Button1.Position = UDim2.new(0.181999996, 0, 0.367000014, 0)
-Button1.Size = UDim2.new(0, 200, 0, 50)
-Button1.Text = "Grab Items"
-Button1.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button1.TextScaled = true
-Button1.TextSize = 14.000
-Button1.TextWrapped = true
-
 -- Scripts:
 
-local function OIEAJAX_fake_script() -- Button4.LocalScript 
+local function OYMUK_fake_script() -- Button4.LocalScript 
 	local script = Instance.new('LocalScript', Button4)
 
 	local Button4 = script.Parent
@@ -129,8 +115,8 @@ local function OIEAJAX_fake_script() -- Button4.LocalScript
 	end)
 	
 end
-coroutine.wrap(OIEAJAX_fake_script)()
-local function BVZPAQJ_fake_script() -- Button3.LocalScript 
+coroutine.wrap(OYMUK_fake_script)()
+local function XMQOB_fake_script() -- Button3.LocalScript 
 	local script = Instance.new('LocalScript', Button3)
 
 	local Button3 = script.Parent
@@ -146,8 +132,8 @@ local function BVZPAQJ_fake_script() -- Button3.LocalScript
 	end)
 	
 end
-coroutine.wrap(BVZPAQJ_fake_script)()
-local function SYMJBVB_fake_script() -- Button2.LocalScript 
+coroutine.wrap(XMQOB_fake_script)()
+local function ANKLKPS_fake_script() -- Button2.LocalScript 
 	local script = Instance.new('LocalScript', Button2)
 
 	local Button2 = script.Parent
@@ -166,33 +152,4 @@ local function SYMJBVB_fake_script() -- Button2.LocalScript
 	end)
 	
 end
-coroutine.wrap(SYMJBVB_fake_script)()
-local function WUTXWY_fake_script() -- Button1.LocalScript 
-	local script = Instance.new('LocalScript', Button1)
-
-	local Button1 = script.Parent
-	
-	Button1.MouseButton1Click:connect(function()
-		local activated = false
-		if activated == false then 
-			activated = true
-		elseif activated == true then
-			activated = false
-			
-		if activated == true then
-		game:GetService"RunService".RenderStepped:Connect(function()
-		for _,v in pairs(game:GetService("Workspace").Items:GetDescendants()) do
-			if v:IsA("TouchTransmitter") then
-				print("Test")
-				firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-				wait(0.1)
-				firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
-				end
-				end
-			   end)
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(WUTXWY_fake_script)()
+coroutine.wrap(ANKLKPS_fake_script)()
