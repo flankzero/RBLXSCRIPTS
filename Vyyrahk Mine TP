@@ -1,0 +1,56 @@
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "AQUAHUB"; -- the title (ofc)
+Text = "AquaHubFreeTrial"; -- what the text says (ofc)
+Icon = "rbxassetid://2723596051"; -- the image if u want. 
+Duration = 5; -- how long the notification should in secounds
+})
+
+bind="q"
+bind2="z"
+
+local function makegui()
+for __,v in pairs(game.workspace:GetDescendants()) do -- the path
+ if v.Name == "Gem" then -- the item
+   local a = Instance.new("BillboardGui",v) -- pretty much explains everything
+   a.Name = "GemGUI"
+   a.Size = UDim2.new(10,0, 10,0)
+   a.AlwaysOnTop = true
+   local b = Instance.new("Frame",a)
+   b.Size = UDim2.new(1,0, 1,0)
+   b.BackgroundTransparency = 0.80
+   b.BorderSizePixel = 0
+   b.BackgroundColor3 = Color3.new(0, 246, 0)
+   local c = Instance.new('TextLabel',b)
+   c.Size = UDim2.new(2,0,2,0)
+   c.BorderSizePixel = 0
+   c.TextSize = 20
+   c.Text = v.Name
+   c.BackgroundTransparency = 1
+ end
+end
+end
+
+local function destroygui()
+    for i,v in pairs(game.workspace:GetDescendants()) do 
+    if v.Name == "GemGUI" then
+        v:Destroy()
+    end
+end
+end
+
+mouse.KeyDown:connect(function(key)
+if key == bind then
+    makegui()
+end
+end)
+    
+mouse.KeyDown:connect(function(key)
+if key == bind2 then
+    destroygui()
+end
+end
+
+
