@@ -2,19 +2,19 @@ local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 
 game.StarterGui:SetCore("SendNotification", {
-Title = "AQUAHUB"; -- the title (ofc)
-Text = "AquaHubFreeTrial"; -- what the text says (ofc)
-Icon = "rbxassetid://2723596051"; -- the image if u want. 
-Duration = 5; -- how long the notification should in secounds
+Title = "AQUA HUB";
+Text = "Aqua Hub Free Trial";
+Icon = "rbxassetid://2723596051";
+Duration = 5;
 })
 
 bind="q"
 bind2="z"
 
 local function makegui()
-for __,v in pairs(game.workspace:GetDescendants()) do -- the path
+for __,v in pairs(game.workspace:GetDescendants()) do
  if v.Name == "Gem" then -- the item
-   local a = Instance.new("BillboardGui",v) -- pretty much explains everything
+   local a = Instance.new("BillboardGui",v)
    a.Name = "GemGUI"
    a.Size = UDim2.new(10,0, 10,0)
    a.AlwaysOnTop = true
