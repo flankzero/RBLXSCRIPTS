@@ -51,6 +51,6 @@ mouse.KeyDown:connect(function(key)
 if key == bind2 then
     destroygui()
 end
-end
+end)
 
 
