@@ -13,7 +13,7 @@ bind2="z"
 
 local function makegui()
 for __,v in pairs(game.workspace:GetDescendants()) do -- the path
- if v.Name == "Gem" then -- the item
+ if v.Name == "Gem" and not v:FindFirstChild("Interactor") then -- the item
    local a = Instance.new("BillboardGui",v) -- pretty much explains everything
    a.Name = "GemGUI"
    a.Size = UDim2.new(10,0, 10,0)
